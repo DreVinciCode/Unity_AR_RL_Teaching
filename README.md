@@ -25,6 +25,6 @@ Check if installation works
 $ mlagents-learn --help
 
 To train the agent
-$ mlagent-learn --force
+$ mlagents-learn --force
 or 
-$ mlagent-learn --run-id=<name>
+$ mlagents-learn --run-id=<name>
