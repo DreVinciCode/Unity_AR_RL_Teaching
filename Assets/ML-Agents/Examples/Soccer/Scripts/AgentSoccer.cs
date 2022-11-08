@@ -33,10 +33,12 @@ public class AgentSoccer : Agent
     float m_BallTouch;
     public Position position;
 
-    const float k_Power = 2000f;
+    const float k_Power = 20f;
     float m_Existential;
     float m_LateralSpeed;
     float m_ForwardSpeed;
+
+    public float ReductionFactor = 0.0365953f;
 
 
     [HideInInspector]
@@ -64,33 +66,33 @@ public class AgentSoccer : Agent
         if (m_BehaviorParameters.TeamId == (int)Team.Blue)
         {
             team = Team.Blue;
-            initialPos = new Vector3(transform.position.x - 5f, .5f, transform.position.z);
+            initialPos = new Vector3(transform.localPosition.x , transform.localPosition.y, transform.localPosition.z);
             rotSign = 1f;
         }
         else
         {
             team = Team.Purple;
-            initialPos = new Vector3(transform.position.x + 5f, .5f, transform.position.z);
+            initialPos = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
             rotSign = -1f;
         }
         if (position == Position.Goalie)
         {
-            m_LateralSpeed = 1.0f;
-            m_ForwardSpeed = 1.0f;
+            m_LateralSpeed = .12f;
+            m_ForwardSpeed = .15f;
         }
         else if (position == Position.Striker)
         {
-            m_LateralSpeed = 0.3f;
-            m_ForwardSpeed = 1.3f;
+            m_LateralSpeed = .2f;
+            m_ForwardSpeed = .12f;
         }
         else
         {
-            m_LateralSpeed = 0.3f;
-            m_ForwardSpeed = 1.0f;
+            m_LateralSpeed = .03f;
+            m_ForwardSpeed = .10f;
         }
         m_SoccerSettings = FindObjectOfType<SoccerSettings>();
         agentRb = GetComponent<Rigidbody>();
-        agentRb.maxAngularVelocity = 500;
+        agentRb.maxAngularVelocity = 5;
 
         m_ResetParams = Academy.Instance.EnvironmentParameters;
     }
@@ -137,15 +139,13 @@ public class AgentSoccer : Agent
                 break;
         }
 
-        transform.Rotate(rotateDir, Time.deltaTime * 100f);
+        transform.Rotate(rotateDir, Time.deltaTime * 1f);
         agentRb.AddForce(dirToGo * m_SoccerSettings.agentRunSpeed,
             ForceMode.VelocityChange);
     }
 
     public override void OnActionReceived(ActionBuffers actionBuffers)
-
     {
-
         if (position == Position.Goalie)
         {
             // Existential bonus for Goalies.
@@ -213,5 +213,4 @@ public class AgentSoccer : Agent
     {
         m_BallTouch = m_ResetParams.GetWithDefault("ball_touch", 0);
     }
-
 }
