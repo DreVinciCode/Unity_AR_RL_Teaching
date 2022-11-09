@@ -36,7 +36,7 @@ public class MoveToGoalAgent : Agent
     */
     public override void OnEpisodeBegin()
     {
-        transform.position = Vector3.zero;
+        //transform.position = Vector3.zero;
         transform.localPosition = _initialiPosition;
         transform.localRotation = _initialRotation;
     }
@@ -54,7 +54,7 @@ public class MoveToGoalAgent : Agent
         float moveZ = actions.ContinuousActions[1];
 
         // To move the Unity Agent
-        transform.position += new Vector3(moveX, 0, moveZ) * Time.deltaTime * _moveSpeed;
+        transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * _moveSpeed;
 
 
         //Apply ros message publisher to move the end effector here

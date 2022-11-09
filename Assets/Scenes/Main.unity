@@ -671,6 +671,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340973954588, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340973954589, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: _moveSpeed
       value: 0.2
@@ -786,6 +790,18 @@ PrefabInstance:
     - target: {fileID: 91080340973954589, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: PlayerActions.m_SingletonActionBindings.Array.data[4].m_Action
       value: Player Actions
+      objectReference: {fileID: 0}
+    - target: {fileID: 95566312837794649, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817363753758145187, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839122269568580103, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 8844816081627039061, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_TagString
