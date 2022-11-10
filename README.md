@@ -28,3 +28,9 @@ To train the agent
 $ mlagents-learn --force
 or 
 $ mlagents-learn --run-id=<name>
+
+To train with config(yaml) file
+$ mlagents-learn <pathToYamlFile/BehaviorName.yaml> --run-id=<filename>
+
+To show tensorboard results (most likely shown on localhost)
+$ tensorboard --logdir results

@@ -125,7 +125,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8871533299173722857, guid: cfe538c5a1e688249a3b634919111e6a, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928751064971545165, guid: cfe538c5a1e688249a3b634919111e6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 8928751523274333641, guid: cfe538c5a1e688249a3b634919111e6a, type: 3}
       propertyPath: m_RootOrder
@@ -187,6 +191,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8934170016315536671, guid: cfe538c5a1e688249a3b634919111e6a, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     - target: {fileID: 8934371040396412337, guid: cfe538c5a1e688249a3b634919111e6a, type: 3}
       propertyPath: m_Name
       value: LabTable
@@ -208,6 +216,11 @@ PrefabInstance:
 --- !u!4 &8839115958990318979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8928751523274333641, guid: cfe538c5a1e688249a3b634919111e6a, type: 3}
+  m_PrefabInstance: {fileID: 91080339742797898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8856539119796203195 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8911262956506423025, guid: cfe538c5a1e688249a3b634919111e6a, type: 3}
   m_PrefabInstance: {fileID: 91080339742797898}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &91080340973954585
@@ -243,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4521296116772160, guid: 70d695e1d8399400bb0f2873bdf29bb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.035
+      value: 0.022
       objectReference: {fileID: 0}
     - target: {fileID: 4521296116772160, guid: 70d695e1d8399400bb0f2873bdf29bb0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -304,7 +317,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &91080340973954591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -335,7 +348,60 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   _TargetGoalPose: {fileID: 95171000524682813}
-  _moveSpeed: 0.1
+  _moveSpeed: 0.2
+  _winMaterial: {fileID: 2100000, guid: 45182b74e59805b438a37368614567ba, type: 2}
+  _loseMaterial: {fileID: 2100000, guid: e14d127f1b559cc4b8d62e2bce987484, type: 2}
+  _defaultMaterial: {fileID: 2100000, guid: a09b94ff17f8b2e4fbf35cdd24193056, type: 2}
+  _floorMeshRenderer: {fileID: 8856539119796203195}
+  PlayerActions:
+    m_Name: Player Actions
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d90703e4-a5d1-46ed-9571-07fbe26c6a9a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: ca893010-82a4-4159-ba41-574d0f740830
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Actions
+      m_Flags: 4
+    - m_Name: up
+      m_Id: ab3802f7-1dc0-4ccd-9cd3-4c51c6b84aa7
+      m_Path: <Keyboard>/i
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Actions
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 713ff18f-3636-441f-8513-b3e81e744588
+      m_Path: <Keyboard>/k
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Actions
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 85641c25-7b60-4e8c-9d48-8f50c83e81af
+      m_Path: <Keyboard>/j
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Actions
+      m_Flags: 8
+    - m_Name: right
+      m_Id: df2308ce-abeb-4f4f-b3d4-82d76c8182cf
+      m_Path: <Keyboard>/l
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Actions
+      m_Flags: 8
+    m_Flags: 0
 --- !u!114 &91080340973954590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,10 +424,10 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: b4875100140a6c540a92abea4594efcb, type: 3}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
-  m_BehaviorName: My Behavior
+  m_BehaviorType: 0
+  m_BehaviorName: MoveToTarget
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -414,7 +480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4935240531098310, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.457
+      value: 0.841
       objectReference: {fileID: 0}
     - target: {fileID: 4935240531098310, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_LocalPosition.y
@@ -422,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4935240531098310, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.305
+      value: 0.384
       objectReference: {fileID: 0}
     - target: {fileID: 4935240531098310, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
       propertyPath: m_LocalRotation.w
@@ -474,6 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114729878072981838, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
+    - {fileID: 54501682632205078, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ec3e8f3ed27e2244caaedaf589590a03, type: 3}
 --- !u!4 &95171000524682813 stripped
 Transform:

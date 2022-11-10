@@ -1,0 +1,65 @@
+{
+    "MoveToTarget": {
+        "checkpoints": [
+            {
+                "steps": 499948,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-499948.onnx",
+                "reward": null,
+                "creation_time": 1668053442.5469787,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-499948.pt"
+                ]
+            },
+            {
+                "steps": 999941,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-999941.onnx",
+                "reward": null,
+                "creation_time": 1668057802.9487462,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-999941.pt"
+                ]
+            },
+            {
+                "steps": 1499949,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-1499949.onnx",
+                "reward": null,
+                "creation_time": 1668062137.626302,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-1499949.pt"
+                ]
+            },
+            {
+                "steps": 1999970,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-1999970.onnx",
+                "reward": null,
+                "creation_time": 1668066435.7799017,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-1999970.pt"
+                ]
+            },
+            {
+                "steps": 2000098,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-2000098.onnx",
+                "reward": null,
+                "creation_time": 1668066435.87323,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-2000098.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2000098,
+            "file_path": "results\\ppo\\MoveToTarget.onnx",
+            "reward": null,
+            "creation_time": 1668066435.87323,
+            "auxillary_file_paths": [
+                "results\\ppo\\MoveToTarget\\MoveToTarget-2000098.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
