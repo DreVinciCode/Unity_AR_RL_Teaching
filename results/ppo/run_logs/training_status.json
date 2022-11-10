@@ -1,23 +1,59 @@
 {
-    "Basic": {
+    "MoveToTarget": {
         "checkpoints": [
             {
-                "steps": 1806,
-                "file_path": "results\\ppo\\Basic\\Basic-1806.onnx",
-                "reward": 0.06793106507895322,
-                "creation_time": 1667842262.5416992,
+                "steps": 499948,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-499948.onnx",
+                "reward": null,
+                "creation_time": 1668053442.5469787,
                 "auxillary_file_paths": [
-                    "results\\ppo\\Basic\\Basic-1806.pt"
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-499948.pt"
+                ]
+            },
+            {
+                "steps": 999941,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-999941.onnx",
+                "reward": null,
+                "creation_time": 1668057802.9487462,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-999941.pt"
+                ]
+            },
+            {
+                "steps": 1499949,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-1499949.onnx",
+                "reward": null,
+                "creation_time": 1668062137.626302,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-1499949.pt"
+                ]
+            },
+            {
+                "steps": 1999970,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-1999970.onnx",
+                "reward": null,
+                "creation_time": 1668066435.7799017,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-1999970.pt"
+                ]
+            },
+            {
+                "steps": 2000098,
+                "file_path": "results\\ppo\\MoveToTarget\\MoveToTarget-2000098.onnx",
+                "reward": null,
+                "creation_time": 1668066435.87323,
+                "auxillary_file_paths": [
+                    "results\\ppo\\MoveToTarget\\MoveToTarget-2000098.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1806,
-            "file_path": "results\\ppo\\Basic.onnx",
-            "reward": 0.06793106507895322,
-            "creation_time": 1667842262.5416992,
+            "steps": 2000098,
+            "file_path": "results\\ppo\\MoveToTarget.onnx",
+            "reward": null,
+            "creation_time": 1668066435.87323,
             "auxillary_file_paths": [
-                "results\\ppo\\Basic\\Basic-1806.pt"
+                "results\\ppo\\MoveToTarget\\MoveToTarget-2000098.pt"
             ]
         }
     },
