@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -271,6 +275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -363,6 +371,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -457,6 +469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -549,6 +565,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -643,6 +663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -735,6 +759,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -829,6 +857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -921,6 +953,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -1015,6 +1051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -1107,6 +1147,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -1201,6 +1245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -1293,6 +1341,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -1576,6 +1628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -1668,6 +1724,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -1855,6 +1915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1947,6 +2011,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -2041,6 +2109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -2133,6 +2205,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -2227,6 +2303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2319,6 +2399,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -2413,6 +2497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -2506,6 +2594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2598,6 +2690,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -2814,6 +2910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -2952,6 +3052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -3044,6 +3148,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -3138,6 +3246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleArena (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -3230,6 +3342,10 @@ PrefabInstance:
     - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_Name
       value: SimpleArena (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 91080340253534150, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 91080340253534151, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_RootOrder
@@ -3382,7 +3498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 91080340973954590, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_BehaviorType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 95171000524682813, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3403,6 +3519,14 @@ PrefabInstance:
     - target: {fileID: 95566312837794649, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.306
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335136796548952088, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: Record
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335136796548952088, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
+      propertyPath: DemonstrationName
+      value: moveToTarget_demo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53df73f59f14e5f4f962be7082ad7b84, type: 3}
