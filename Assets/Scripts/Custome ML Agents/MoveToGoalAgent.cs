@@ -32,10 +32,10 @@ public class MoveToGoalAgent : Agent
     {
         //_floorMeshRenderer.material = _defaultMaterial;
 
-        transform.localPosition = new Vector3(Random.Range(-0.1f, 0.4f), 0.024f, Random.Range(0.045f, 0.5f));
+        transform.localPosition = new Vector3(Random.Range(0.1f, 0.4f), 0.024f, Random.Range(0.16f, 0.5f));
         transform.localRotation = _initialRotation;
 
-        _TargetGoalPose.localPosition = new Vector3(Random.Range(0.52f, 1f), 0.0214f, Random.Range(0.06f, 0.56f));
+        _TargetGoalPose.localPosition = new Vector3(Random.Range(0.52f, 0.8f), 0.0214f, Random.Range(0.16f, 0.5f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
