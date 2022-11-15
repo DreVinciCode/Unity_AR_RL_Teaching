@@ -32,10 +32,10 @@ public class MoveToGoalAgent : Agent
     {
         //_floorMeshRenderer.material = _defaultMaterial;
 
-        transform.localPosition = new Vector3(Random.Range(0.1f, 0.4f), 0.024f, Random.Range(0.16f, 0.5f));
+        transform.localPosition = new Vector3(Random.Range(0.1f, 0.4f), 0.1f, Random.Range(0.16f, 0.5f));
         transform.localRotation = _initialRotation;
 
-        _TargetGoalPose.localPosition = new Vector3(Random.Range(0.52f, 0.8f), 0.0214f, Random.Range(0.16f, 0.5f));
+        _TargetGoalPose.localPosition = new Vector3(Random.Range(0.12f, 0.8f), 0.1f, Random.Range(0.16f, 0.5f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -53,6 +53,9 @@ public class MoveToGoalAgent : Agent
         transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * _moveSpeed;
 
         //Apply ros message publisher to move the end effector here
+
+        //Apply incentive
+        AddReward(-1f / MaxStep);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -64,7 +67,7 @@ public class MoveToGoalAgent : Agent
 
     private void OnTriggerEnter(Collider other)
     {        
-        if (other.tag == "wall")
+        if (other.tag == "wall" || other.tag == "ground")
         {
             _floorMeshRenderer.material = _loseMaterial;
             SetReward(-1f);
