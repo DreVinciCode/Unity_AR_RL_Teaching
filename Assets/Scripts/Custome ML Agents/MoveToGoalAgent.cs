@@ -35,7 +35,7 @@ public class MoveToGoalAgent : Agent
         transform.localPosition = new Vector3(Random.Range(0.1f, 0.4f), 0.1f, Random.Range(0.16f, 0.5f));
         transform.localRotation = _initialRotation;
 
-        _TargetGoalPose.localPosition = new Vector3(Random.Range(0.12f, 0.8f), 0.1f, Random.Range(0.16f, 0.5f));
+        _TargetGoalPose.localPosition = new Vector3(Random.Range(0.12f, 0.8f), Random.Range(0.02f, 0.3f), Random.Range(0.16f, 0.5f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -48,9 +48,15 @@ public class MoveToGoalAgent : Agent
     {
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
+        float moveY = actions.ContinuousActions[2];
 
-        // To move the Unity Agent
-        transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * _moveSpeed;
+        var moveVector = new Vector3(moveX, moveY, moveZ) * Time.deltaTime * _moveSpeed;
+
+
+        // To move the Agent
+        transform.localPosition += moveVector;
+
+        Debug.Log("speed: " + moveVector.magnitude);
 
         //Apply ros message publisher to move the end effector here
 
@@ -61,8 +67,9 @@ public class MoveToGoalAgent : Agent
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         ActionSegment<float> continousActions = actionsOut.ContinuousActions;
-        continousActions[0] = PlayerActions.ReadValue<Vector2>().x;
-        continousActions[1] = PlayerActions.ReadValue<Vector2>().y;
+        continousActions[0] = PlayerActions.ReadValue<Vector3>().x;
+        continousActions[1] = PlayerActions.ReadValue<Vector3>().z;
+        continousActions[2] = PlayerActions.ReadValue<Vector3>().y;
     }
 
     private void OnTriggerEnter(Collider other)
