@@ -755,6 +755,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1619607229}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1619607229}
+        m_TargetAssemblyTypeName: RosSharp.RosBridgeClient.UnitySubscriber`1[[RosSharp.RosBridgeClient.MessageTypes.Geometry.Twist,
+          RosBridgeClient
+        m_MethodName: SubscribeStatus
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   RosConnectionFailed:
     m_PersistentCalls:
       m_Calls: []
@@ -913,7 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Topic: /my_gen3_lite/end_effector_pose
   TimeStep: 0
-  endEffectorPublisher: {fileID: 0}
+  endEffectorPublisher: {fileID: 112142266}
 --- !u!1 &1857005649
 GameObject:
   m_ObjectHideFlags: 0
