@@ -50,13 +50,14 @@ public class MoveToGoalAgent : Agent
         float moveZ = actions.ContinuousActions[1];
         float moveY = actions.ContinuousActions[2];
 
-        var moveVector = new Vector3(moveX, moveY, moveZ) * Time.deltaTime * _moveSpeed;
+        //var moveVector = new Vector3(moveX, moveY, moveZ) * Time.deltaTime * _moveSpeed;
+        var moveVector = new Vector3(moveX, moveY, moveZ) * _moveSpeed;
 
 
         // To move the Agent
         transform.localPosition += moveVector;
 
-        Debug.Log("speed: " + moveVector.magnitude);
+        //Debug.Log("speed: " + moveVector.magnitude);
 
         //Apply ros message publisher to move the end effector here
 
