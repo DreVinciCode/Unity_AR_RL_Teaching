@@ -918,6 +918,7 @@ GameObject:
   - component: {fileID: 1619607228}
   - component: {fileID: 1619607229}
   - component: {fileID: 1619607230}
+  - component: {fileID: 1619607231}
   m_Layer: 0
   m_Name: RosConnector
   m_TagString: Untagged
@@ -1199,6 +1200,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Topic: /KinovaAR/RL_HomePosition
+--- !u!114 &1619607231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619607223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f502e379866df4041b96f2a2104b3b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /my_gen3_lite/in/cartesian_vel
 --- !u!1 &1857005649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,8 +1560,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2134770383}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1580,8 +1593,8 @@ Transform:
   m_Children:
   - {fileID: 1236184743}
   - {fileID: 3807861161367257268}
-  m_Father: {fileID: 2128815830}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2140984469
 PrefabInstance:

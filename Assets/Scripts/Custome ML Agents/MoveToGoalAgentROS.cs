@@ -26,10 +26,9 @@ namespace RosSharp.RosBridgeClient
 
         public override void Initialize()
         {
-            _initialiPosition = transform.localPosition;
-            _initialRotation = transform.localRotation;
-            PlayerActions.Enable();
-
+            //_initialiPosition = transform.localPosition;
+            //_initialRotation = transform.localRotation;
+            //PlayerActions.Enable();
         }
 
         public override void OnEpisodeBegin()
@@ -60,8 +59,6 @@ namespace RosSharp.RosBridgeClient
 
             // To move the Agent
             //transform.localPosition += moveVector;
-
-            //Debug.Log("speed: " + moveVector.magnitude);
 
             //Apply ros message publisher to move the end effector here
             KinovaTwistPublisher.ActionReceiver(moveVector);
