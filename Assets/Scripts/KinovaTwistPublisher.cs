@@ -33,9 +33,16 @@ namespace RosSharp.RosBridgeClient
         private static MessageTypes.Geometry.Vector3 GetGeometryVector3(Vector3 vector3)
         {
             MessageTypes.Geometry.Vector3 geometryVector3 = new MessageTypes.Geometry.Vector3();
-            geometryVector3.x = vector3.x;
-            geometryVector3.y = vector3.y;
-            geometryVector3.z = vector3.z;
+
+            //geometryVector3.x = vector3.x;
+            //geometryVector3.y = vector3.y;
+            //geometryVector3.z = vector3.z;
+
+            geometryVector3.x = -vector3.x;
+            geometryVector3.y = -vector3.z;
+            geometryVector3.z = vector3.y;
+
+
             return geometryVector3;
         }
     }

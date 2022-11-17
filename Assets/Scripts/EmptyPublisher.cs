@@ -22,7 +22,7 @@ namespace RosSharp.RosBridgeClient
             _message = new MessageTypes.Std.Empty();
         }
 
-        public void ExecuteTrajectory()
+        public void RL_HomePosition()
         {
             ProcessMessage();
         }

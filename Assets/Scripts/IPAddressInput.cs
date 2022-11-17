@@ -13,11 +13,11 @@ public class IPAddressInput : MonoBehaviour
     public GameObject ContinueButton;
 
     private string _uniqueIP;
-    private string _iPAddress = "192.168.0.23";
+    private string _iPAddress = "";
 
     private void Start()
     {
-        _uniqueIP = gameObject.transform.parent.transform.parent.name;
+        _uniqueIP = gameObject.transform.parent.name;
         _iPAddress = PlayerPrefs.GetString(_uniqueIP);
         ContinueButton.SetActive(ValidateIPv4(_iPAddress));
         IPDisplay.text = _iPAddress;

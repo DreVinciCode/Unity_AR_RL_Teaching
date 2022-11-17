@@ -12,17 +12,13 @@ namespace RosSharp.RosBridgeClient
     {
         [SerializeField] private Transform _TargetGoalPose;
         [SerializeField] private float _moveSpeed = 1f;
-        [SerializeField] private Material _winMaterial;
-        [SerializeField] private Material _loseMaterial;
-        [SerializeField] private Material _defaultMaterial;
-        [SerializeField] private MeshRenderer _floorMeshRenderer;
-
+  
         private Vector3 _initialiPosition;
         private Quaternion _initialRotation;
 
-        public InputAction PlayerActions;
 
         public KinovaTwistPublisher KinovaTwistPublisher;
+        public EmptyPublisher EmptyPublisher;
 
         public override void Initialize()
         {
@@ -37,8 +33,9 @@ namespace RosSharp.RosBridgeClient
 
             //transform.localPosition = new Vector3(Random.Range(0f, 0.5f), 0.14f, Random.Range(-0.127f, 0.125f));
             //transform.localRotation = _initialRotation;
+            KinovaTwistPublisher._publishMessageCheck = true;
 
-            //_TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
+            _TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
         }
 
         public override void CollectObservations(VectorSensor sensor)
@@ -53,8 +50,8 @@ namespace RosSharp.RosBridgeClient
             float moveZ = actions.ContinuousActions[1];
             float moveY = actions.ContinuousActions[2];
 
-            var moveVector = new Vector3(moveX, moveY, moveZ) * Time.deltaTime * _moveSpeed;
-            //var moveVector = new Vector3(moveX, moveY, moveZ) * _moveSpeed;
+            //var moveVector = new Vector3(moveX, moveY, moveZ) * Time.deltaTime * _moveSpeed;
+            var moveVector = new Vector3(moveX, moveY, moveZ) * _moveSpeed;
 
 
             // To move the Agent
@@ -65,7 +62,7 @@ namespace RosSharp.RosBridgeClient
 
 
             //Apply incentive
-            AddReward(-1f / MaxStep);
+            //AddReward(-1f / MaxStep);
         }
 
         public override void Heuristic(in ActionBuffers actionsOut)
@@ -80,16 +77,18 @@ namespace RosSharp.RosBridgeClient
         {
             if (other.tag == "wall" || other.tag == "ground")
             {
-                _floorMeshRenderer.material = _loseMaterial;
                 SetReward(-1f);
                 EndEpisode();
+                //KinovaTwistPublisher._publishMessageCheck = false;
+                //EmptyPublisher.RL_HomePosition();
             }
 
             if (other.tag == "ball")
             {
-                _floorMeshRenderer.material = _winMaterial;
                 SetReward(1f);
                 EndEpisode();
+                //KinovaTwistPublisher._publishMessageCheck = false;
+                //EmptyPublisher.RL_HomePosition();
             }
         }
     }
