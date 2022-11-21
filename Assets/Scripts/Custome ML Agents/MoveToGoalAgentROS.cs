@@ -41,6 +41,8 @@ namespace RosSharp.RosBridgeClient
         public override void CollectObservations(VectorSensor sensor)
         {
             sensor.AddObservation(transform.position);
+            
+            //if object not detected then disable script
             sensor.AddObservation(_TargetGoalPose.position);
         }
 
