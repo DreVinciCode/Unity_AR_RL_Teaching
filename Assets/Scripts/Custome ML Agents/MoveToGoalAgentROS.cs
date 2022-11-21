@@ -16,6 +16,8 @@ namespace RosSharp.RosBridgeClient
         private Vector3 _initialiPosition;
         private Quaternion _initialRotation;
 
+        public bool _VuforiaTargetDetected { get; set; }
+
 
         public KinovaTwistPublisher KinovaTwistPublisher;
         public EmptyPublisher EmptyPublisher;
@@ -35,14 +37,16 @@ namespace RosSharp.RosBridgeClient
             //transform.localRotation = _initialRotation;
             KinovaTwistPublisher._publishMessageCheck = true;
 
-            _TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
+            //_TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
         }
 
         public override void CollectObservations(VectorSensor sensor)
         {
             sensor.AddObservation(transform.position);
-            
-            //if object not detected then disable script
+
+            //if object not detected then disable script?
+
+ 
             sensor.AddObservation(_TargetGoalPose.position);
         }
 
@@ -60,7 +64,10 @@ namespace RosSharp.RosBridgeClient
             //transform.localPosition += moveVector;
 
             //Apply ros message publisher to move the end effector here
-            KinovaTwistPublisher.ActionReceiver(moveVector);
+            
+            
+            if(_VuforiaTargetDetected)
+                KinovaTwistPublisher.ActionReceiver(moveVector);
 
 
             //Apply incentive
