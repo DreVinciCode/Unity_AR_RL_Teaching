@@ -66,8 +66,8 @@ namespace RosSharp.RosBridgeClient
             //Apply ros message publisher to move the end effector here
             
             
-            if(_VuforiaTargetDetected)
-                KinovaTwistPublisher.ActionReceiver(moveVector);
+            //if(_VuforiaTargetDetected)
+            KinovaTwistPublisher.ActionReceiver(moveVector);
 
 
             //Apply incentive
