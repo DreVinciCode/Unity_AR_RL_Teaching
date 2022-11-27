@@ -11,6 +11,9 @@ public class PushTargetToGoal : Agent
     [HideInInspector]
     public GoalDetectModified goalDetect;
 
+    [HideInInspector]
+    public TargetObjectBehavior targetDetect;
+
     [SerializeField] private Transform _TargetGoalPose;
     [SerializeField] private GameObject _GoalLocation;
 
@@ -26,6 +29,9 @@ public class PushTargetToGoal : Agent
 
     public override void Initialize()
     {
+        targetDetect = _TargetGoalPose.gameObject.GetComponent<TargetObjectBehavior>();
+        targetDetect.agent = this;
+
         goalDetect = _GoalLocation.GetComponent<GoalDetectModified>();
         goalDetect.agent = this;
 
@@ -41,15 +47,15 @@ public class PushTargetToGoal : Agent
         transform.localPosition = new Vector3(Random.Range(0f, 0.5f), 0.14f, Random.Range(-0.127f, 0.125f));
         transform.localRotation = _initialRotation;
 
-        _TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
-        _GoalLocation.transform.localPosition = new Vector3(Random.Range(0.0f, 0.5f), 0.01f, Random.Range(-0.127f, 0.125f));
+        _TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.2f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
+        _GoalLocation.transform.localPosition = new Vector3(Random.Range(0.35f, 0.5f), 0.01f, Random.Range(-0.2f, 0.125f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
         sensor.AddObservation(transform.localPosition);
         sensor.AddObservation(_TargetGoalPose.localPosition);
-        //sensor.AddObservation(_GoalLocation.localPosition);
+        sensor.AddObservation(_GoalLocation.transform.localPosition);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -76,19 +82,26 @@ public class PushTargetToGoal : Agent
         continousActions[2] = PlayerActions.ReadValue<Vector3>().y;
     }
 
+    public void GoalReached()
+    {
+        _floorMeshRenderer.material = _winMaterial;
+        SetReward(5f);   
+        EndEpisode();
+    }
+
+    public void BallDropped()
+    {
+        _floorMeshRenderer.material = _loseMaterial;
+        SetReward(-1f);
+        EndEpisode();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "wall" || other.tag == "ground")
         {
             _floorMeshRenderer.material = _loseMaterial;
             SetReward(-1f);
-            EndEpisode();
-        }
-
-        if (other.tag == "ball")
-        {
-            _floorMeshRenderer.material = _winMaterial;
-            SetReward(1f);
             EndEpisode();
         }
     }
