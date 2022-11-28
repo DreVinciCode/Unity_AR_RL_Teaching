@@ -35,7 +35,7 @@ namespace RosSharp.RosBridgeClient
             //transform.localRotation = _initialRotation;
             KinovaTwistPublisher._publishMessageCheck = true;
 
-            _TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
+            //_TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
         }
 
         public override void CollectObservations(VectorSensor sensor)
