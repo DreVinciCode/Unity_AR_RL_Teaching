@@ -162,24 +162,6 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: -6897482870605347166, guid: 4c38b16568fb78b409e1e0469df5a441, type: 2}
   - {fileID: 1310592050099494963, guid: 7c882c2229683e64784abf33ecdefa6c, type: 2}
   - {fileID: 0}
@@ -684,8 +666,6 @@ PlayerSettings:
   platformCapabilities:
     WindowsStoreApps:
       GazeInput: True
-      PrivateNetworkClientServer: True
-      InternetClientServer: True
       SpatialPerception: True
       InternetClient: True
       WebCam: True
