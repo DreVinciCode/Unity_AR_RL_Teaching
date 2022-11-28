@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/MoveToTarget_Vuforia.unity
+    guid: 54870959204aa9d45aa5b46f3b91246d
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 4c38b16568fb78b409e1e0469df5a441, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7c882c2229683e64784abf33ecdefa6c, type: 2}
