@@ -44,7 +44,7 @@ public class PushTargetToGoal : Agent
     {
         //_floorMeshRenderer.material = _defaultMaterial;
 
-        transform.localPosition = new Vector3(Random.Range(0f, 0.5f), 0.14f, Random.Range(-0.127f, 0.125f));
+        transform.localPosition = new Vector3(Random.Range(0f, 0.5f), 0.05f, Random.Range(-0.127f, 0.125f));
         transform.localRotation = _initialRotation;
 
         _TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.2f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
@@ -62,9 +62,12 @@ public class PushTargetToGoal : Agent
     {
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
-        float moveY = actions.ContinuousActions[2];
+        //float moveY = actions.ContinuousActions[2];
 
-        var moveVector = new Vector3(moveX, moveY, moveZ) * Time.deltaTime * _moveSpeed;
+
+        //var moveVector = new Vector3(moveX, moveY, moveZ) * Time.deltaTime * _moveSpeed;
+        var moveVector = new Vector3(moveX, 0, moveZ) * Time.deltaTime * _moveSpeed;
+
         //var moveVector = new Vector3(moveX, moveY, moveZ) * _moveSpeed;
 
         // To move the Agent
@@ -79,7 +82,7 @@ public class PushTargetToGoal : Agent
         ActionSegment<float> continousActions = actionsOut.ContinuousActions;
         continousActions[0] = PlayerActions.ReadValue<Vector3>().x;
         continousActions[1] = PlayerActions.ReadValue<Vector3>().z;
-        continousActions[2] = PlayerActions.ReadValue<Vector3>().y;
+        //continousActions[2] = PlayerActions.ReadValue<Vector3>().y;
     }
 
     public void GoalReached()
