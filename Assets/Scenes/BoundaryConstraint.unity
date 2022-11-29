@@ -1861,6 +1861,7 @@ GameObject:
   - component: {fileID: 1619607230}
   - component: {fileID: 1619607231}
   - component: {fileID: 1619607232}
+  - component: {fileID: 1619607233}
   m_Layer: 0
   m_Name: RosConnector
   m_TagString: Untagged
@@ -2011,6 +2012,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: ChangeColor, Assembly-CSharp
         m_MethodName: ConnectedColor
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1619607233}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2231,6 +2244,19 @@ MonoBehaviour:
   Topic: /my_gen3_lite/joint_states
   TimeStep: 0
   jointStatesPublisher: {fileID: 3807861161367257273}
+--- !u!114 &1619607233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619607223}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12ee4e7ed4d5fb44bca9eeed56de677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /kinovaAR/boundary/bottom
 --- !u!1001 &1767221158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2866,7 +2892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2128815827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2966,7 +2992,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2134770383}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2998,8 +3025,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1236184743}
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 2128815830}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2140984469
 PrefabInstance:
@@ -5936,13 +5963,13 @@ MonoBehaviour:
   onManipulationEnded:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1619607233}
+        m_TargetAssemblyTypeName: RosSharp.RosBridgeClient.BoundaryTest, Assembly-CSharp
+        m_MethodName: UpdateBottomConstraint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
