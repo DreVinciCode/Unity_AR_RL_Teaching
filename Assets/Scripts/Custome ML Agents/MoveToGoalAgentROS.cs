@@ -36,7 +36,7 @@ namespace RosSharp.RosBridgeClient
             //transform.localRotation = _initialRotation;
             KinovaTwistPublisher._publishMessageCheck = true;
 
-            if(SceneManager.GetActiveScene().name == "MoveToTarget")
+            if(SceneManager.GetActiveScene().name == "MoveToTarget" || SceneManager.GetActiveScene().name == "Main")
                 _TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
         }
 
