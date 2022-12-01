@@ -75,7 +75,7 @@ public class MoveToGoalAgent : Agent
 
     private void OnTriggerEnter(Collider other)
     {        
-        if (other.tag == "wall" || other.tag == "ground")
+        if (other.tag == "wall" || other.tag == "ground" || other.tag == "robot")
         {
             _floorMeshRenderer.material = _loseMaterial;
             SetReward(-1f);
