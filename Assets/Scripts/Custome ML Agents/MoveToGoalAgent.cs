@@ -5,7 +5,7 @@ using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine.InputSystem;
-
+using System.IO;
 public class MoveToGoalAgent : Agent
 {
     [SerializeField] private Transform _TargetGoalPose;
@@ -19,12 +19,27 @@ public class MoveToGoalAgent : Agent
     private Quaternion _initialRotation;
 
     public InputAction PlayerActions;
-  
+
+    private string filename = "";
+
+
+    private class AgentHistory
+    {
+        public float x_pos;
+        public float y_pos;
+        public float z_pos;
+    }
+
+    private List<AgentHistory> myUserActionList = new List<AgentHistory>();
+
+
+
     public override void Initialize()
     {
         _initialiPosition = transform.localPosition;
         _initialRotation = transform.localRotation;
         PlayerActions.Enable();
+        filename = Application.dataPath + "/record_success.csv";
 
     }
 
@@ -36,6 +51,21 @@ public class MoveToGoalAgent : Agent
         transform.localRotation = _initialRotation;
 
         _TargetGoalPose.localPosition = new Vector3(Random.Range(0.0f, 0.5f), Random.Range(0.02f, 0.3f), Random.Range(-0.127f, 0.125f));
+
+
+
+    }
+
+    private void RecordGoalPosition()
+    {
+        AgentHistory myUserAction = new AgentHistory();
+
+        myUserAction.x_pos = _TargetGoalPose.localPosition.x;
+        myUserAction.y_pos = _TargetGoalPose.localPosition.y;
+        myUserAction.z_pos = _TargetGoalPose.localPosition.z;
+
+        myUserActionList.Add(myUserAction);
+        WriteCSV();
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -86,7 +116,29 @@ public class MoveToGoalAgent : Agent
         {
             _floorMeshRenderer.material = _winMaterial;
             SetReward(1f);
+            RecordGoalPosition();
             EndEpisode();
         }    
-    }   
+    }
+
+    public void WriteCSV()
+    {
+        if (myUserActionList.Count > 0)
+        {
+            TextWriter tw = new StreamWriter(filename, false);
+           
+            tw.Close();
+
+            tw = new StreamWriter(filename, true);
+
+            for (int i = 0; i < myUserActionList.Count; i++)
+            {
+                tw.WriteLine(myUserActionList[i].x_pos + ", " +
+                             myUserActionList[i].y_pos + ", " +
+                             myUserActionList[i].z_pos);
+            }
+            tw.Close();
+        }
+    }
+
 }
